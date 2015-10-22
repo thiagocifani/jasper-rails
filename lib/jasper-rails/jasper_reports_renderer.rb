@@ -8,7 +8,7 @@ module JasperRails
 
     def initialize(file, resource)
       @jrxml_file  = fetch_resource(file)
-      @jasper_file = jrxml_file.sub(/\.jrxml$/, ".jasper")
+      @jasper_file = jrxml_file.sub(/\.jrxml/, ".jasper")
       @options     = options
       @resource    = resource
       @fill_manager = Rjb::import 'net.sf.jasperreports.engine.JasperFillManager'
